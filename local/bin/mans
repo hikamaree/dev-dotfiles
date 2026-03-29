@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PAGE=$(man -k . | fzf --height=40% | awk '{print $1}')
+[[ -n $PAGE ]] && man "$PAGE"
